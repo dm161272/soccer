@@ -10,7 +10,6 @@ data: {name: 'Zura'},
 
 token: null
 
-
 }
 
 },
