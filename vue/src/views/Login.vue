@@ -10,9 +10,8 @@
         <img class="mx-auto h-20 w-auto" src="/src/assets/soccerball.svg" alt="Soccer_ball_svg" />
         <h2 class="mt-6 text-center text-3xl font-extrabold text-gray-900">Log in to your account</h2>
          <p class="mt-2 text-center text-sm text-gray-600">
-          Or
-          {{ ' ' }}
-          <router-link :to="{name: 'Register'}" class="font-medium text-indigo-600 hover:text-indigo-500"> Register a new user </router-link>
+          or
+          <router-link :to="{name: 'Register'}" class="font-medium text-indigo-600 hover:text-indigo-500"><br  />Register a new user </router-link>
         </p>
        
       </div>
@@ -53,6 +52,14 @@
   </div>
 </template>
 
-<script setup>
+<script>
 import { LockClosedIcon } from '@heroicons/vue/solid'
+
+export default {
+
+components: {
+
+    LockClosedIcon,
+},
+}
 </script>
