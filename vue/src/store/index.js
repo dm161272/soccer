@@ -8,7 +8,7 @@ user: {
 
 data: {},
 
-token: ''
+token: '123'
 
 }
 
