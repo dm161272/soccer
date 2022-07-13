@@ -6,9 +6,9 @@ state: {
 
 user: { 
 
-data: {name: 'Zura'},
+data: {},
 
-token: null
+token: ''
 
 }
 

@@ -1,4 +1,3 @@
-
 <!-- This example requires Tailwind CSS v2.0+ -->
 <template>
   <!--
@@ -84,17 +83,29 @@
       </DisclosurePanel>
     </Disclosure>
 
-    <router-view></router-view>
-
+    <header class="bg-white shadow">
+      <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
+        <h1 class="text-3xl font-bold text-gray-900">Team players</h1>
+      </div>
+    </header>
+    <main>
+      <div class="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
+        <!-- Replace with your content -->
+        <div class="px-4 py-6 sm:px-0">
+          <div class="border-4 border-dashed border-gray-200 rounded-lg h-96" />
+        </div>
+        <!-- /End replace -->
+      </div>
+    </main>
   </div>
-
+</template>
 
 <script setup>
 import { Disclosure, DisclosureButton, DisclosurePanel, Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/vue'
 import { BellIcon, MenuIcon, XIcon } from '@heroicons/vue/outline'
 
 const user = {
-  name: 'Tom Cook',
+  name: '',
   email: 'tom@example.com',
   imageUrl:
     'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
@@ -112,23 +123,3 @@ const userNavigation = [
   { name: 'Sign out', href: '#' },
 ]
 </script>
-
-
-
-</template>
-
-
-
-<script>
-
-export default {
-
- name: "DefaultLayout"
-
-}
-
-</script>
-
-<style scoped>
-
-</style>
