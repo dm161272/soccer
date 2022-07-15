@@ -12,7 +12,7 @@ const routes = [
 {
     path: '/',
     redirect: '/dashboard',
-    component: Dashboard,
+    component: DefaultLayout,
     meta: {requiresAuth: true},
     children:[
         {path: '/dashboard', name: 'Dashboard', component: Dashboard},
@@ -46,20 +46,7 @@ const routes = [
 
 },
 
-{
-    path: '/login',
-    name: 'Login',
-    component: Login
-
-},
-
-{
-    path: '/register',
-    name: 'Register',
-    component: Register
-}
 ];
-
 
 const router = createRouter({
 

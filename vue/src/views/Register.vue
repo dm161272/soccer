@@ -1,9 +1,6 @@
 
 <template>
-
-  <div class="min-h-full flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
-    <div class="max-w-md w-full space-y-8">
-      <div>
+    <div>
         <img class="mx-auto h-20 w-auto" src="/src/assets/soccerball.svg" alt="Soccer_ball_svg" />
         <h2 class="mt-6 text-center text-3xl font-extrabold text-gray-900">Register a new user</h2>
         <p class="mt-2 text-center text-sm text-gray-600">
@@ -11,6 +8,7 @@
           <router-link :to="{name: 'Login'}" class="font-medium text-indigo-600 hover:text-indigo-500"><br  />Log in to your account</router-link>
         </p>
       </div>
+
       <form class="mt-8 space-y-6" @submit="register">
         <input type="hidden" name="remember" value="true" />
         <div class="rounded-md shadow-sm -space-y-px">
@@ -56,8 +54,7 @@
           </button>
         </div>
       </form>
-    </div>
-  </div>
+
 </template>
 
 <script setup>
