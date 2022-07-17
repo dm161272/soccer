@@ -1,6 +1,7 @@
+
 <template>
 
-<header class="bg-white shadow">
+    <header class="bg-white shadow">
       <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
         <h1 class="text-3xl font-bold text-gray-900">Dashboard</h1>
       </div>
@@ -10,7 +11,6 @@
         <!-- Replace with your content -->
         <div class="px-4 py-6 sm:px-0">
           <div class="border-4 border-dashed border-gray-200 rounded-lg h-96" />
-     <h1>TEST</h1>
         </div>
         <!-- /End replace -->
       </div>
@@ -18,20 +18,15 @@
 
 </template>
 
-
 <script>
-
 export default {
 
-  name: 'Dashboard'
+  name: 'Teams'
 
 }
 
 </script>
 
-
 <style scoped>
-
-
 
 </style>

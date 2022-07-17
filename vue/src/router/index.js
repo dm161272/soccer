@@ -3,7 +3,7 @@ import store from "../store";
 import Dashboard from '../views/Dashboard.vue';
 import Login from '../views/Login.vue';
 import Register from '../views/Register.vue';
-import Surveys from '../views/Surveys.vue';
+import Teams from '../views/Teams.vue';
 import DefaultLayout from '../components/DefaultLayout.vue';
 import AuthLayout from '../components/AuthLayout.vue';
 
@@ -16,7 +16,7 @@ const routes = [
     meta: {requiresAuth: true},
     children:[
         {path: '/dashboard', name: 'Dashboard', component: Dashboard},
-        {path: '/surveys', name: 'Surveys', component: Surveys},
+        {path: '/teams', name: 'Teams', component: Teams},
 
     ]
 
@@ -40,8 +40,9 @@ const routes = [
             path: '/register',
             name: 'Register',
             component: Register
-        }
+        },
        
+      
     ]
 
 },

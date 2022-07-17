@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Validation\Rules\Password;
+use Illuminate\Testing\Fluent\Concerns\Has;
 use Illuminate\Support\Facades\Auth;
 
 class AuthController extends Controller
@@ -61,11 +62,13 @@ class AuthController extends Controller
     }
 
 
-    public function logout(Request $request)
+    public function logout()
     {
-       /** @var User $user */
+        /** @var User $user */
         $user = Auth::user();
-        $user->currentAccesToken()->delete();
+        // Revoke the token that was used to authenticate the current request...
+        $user->currentAccessToken()->delete();
+
         return response([
             'success' => true
         ]);

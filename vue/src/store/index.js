@@ -7,7 +7,13 @@ state: {
 
 user: { 
 
-data: {},
+data: {
+
+    name: 'Tom Cook',
+    email: 'tom@example.com',
+    imageUrl:'/src/assets/soccer_player1.svg',
+
+},
 
 token: sessionStorage.getItem('TOKEN'),
 
@@ -34,12 +40,21 @@ login({commit}, user) {
     })
 
     },
+
+logout({commit}) {
+    return axiosClient.post('/logout')
+    .then(response => {
+        commit('logout')
+        return response;
+    })
+  }
 },
 
 mutations: {
-    logout: (state) => {
+    logout: (state) => {   
         state.user.token = null;
         state.user.data = {};
+        sessionStorage.removeItem("TOKEN");
     },
 
     setUser: (state, userData) => {
@@ -48,10 +63,7 @@ mutations: {
         sessionStorage.setItem('TOKEN', userData.token);
     },
 },
-
-
 modules: {},
-
 });
 
 
